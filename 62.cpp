@@ -20,7 +20,7 @@ int main(){
    vector<unsigned long long int> cube,temp2,fp2;
    map<unsigned long long int, vector<unsigned long long int> > mp;
   map<unsigned long long int, int > mp2;
-  unsigned long long int temp,fp,j,k,carry;
+  long long int temp,fp,j,k,carry;
   int i;
   for(i=10;i<=10000;i++){
     temp=i;
@@ -47,7 +47,7 @@ int main(){
     if(mp.find(fp)!=mp.end()){
       mp2[fp]++;
       if(mp2[fp]==5){
-        for(j=0;j<mp[fp].size();j++) 
+        for(j=mp[fp].size()-1;j>=0;j--) 
            cout<<mp[fp][j];
         exit(0);
       }
